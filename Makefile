@@ -191,6 +191,8 @@ else ifeq ($(MACHINEBUILD),arguspingulux)
 brands=fulan
 else ifeq ($(MACHINEBUILD),twinboxlcd)
 brands=ceryon
+else ifeq ($(MACHINEBUILD),singleboxlcd)
+brands=ceryon
 else ifeq ($(MACHINEBUILD),sf208)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),sf228)
@@ -520,6 +522,9 @@ MACHINEBUILD=sparkone
 else ifeq ($(MACHINEBUILD),twinboxlcd)
 MACHINE=7100s
 MACHINEBUILD=twinboxlcd
+else ifeq ($(MACHINEBUILD),singleboxlcd)
+MACHINE=7100s
+MACHINEBUILD=singleboxlcd
 else ifeq ($(MACHINEBUILD),sf208)
 MACHINE=7210s
 MACHINEBUILD=sf208
