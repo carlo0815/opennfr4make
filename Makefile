@@ -12,7 +12,7 @@ DISTRO ?= opennfr
 ONLINECHECK_URL ?= "http://google.com"
 ONLINECHECK_TIMEOUT ?= 2
 
-BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(DISTRO_TYPE)/$(MACHINE)
+BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(MACHINE)
 TOPDIR = $(BUILD_DIR)
 DL_DIR = $(CURDIR)/sources
 SSTATE_DIR = $(CURDIR)/builds/$(DISTRO)/sstate-cache
