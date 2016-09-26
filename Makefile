@@ -21,6 +21,223 @@ DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
+ifeq ($(MACHINEBUILD),tm2t)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmnano)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmnano2t)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmsingle)
+brands=dags
+else ifeq ($(MACHINEBUILD),tmtwin)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios100hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),roxxs200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),mediaart200hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),iqonios300hd)
+brands=dags
+else ifeq ($(MACHINEBUILD),force1)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos1plus)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos2plus)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos3plus)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos1)
+brands=dags
+else ifeq ($(MACHINEBUILD),optimussos2)
+brands=dags
+else ifeq ($(MACHINEBUILD),mediabox)
+brands=dags 
+else ifeq ($(MACHINEBUILD),quadbox2400)
+brands=skylake 
+else ifeq ($(MACHINEBUILD),mutant2400)
+brands=skylake
+else ifeq ($(MACHINEBUILD),classm)
+brands=odin
+else ifeq ($(MACHINEBUILD),axodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),caxodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),saxodin)
+brands=odin
+else ifeq ($(MACHINEBUILD),axodinc)
+brands=odin
+else ifeq ($(MACHINEBUILD),starsatlx)
+brands=odin
+else ifeq ($(MACHINEBUILD),genius)
+brands=odin
+else ifeq ($(MACHINEBUILD),evo)
+brands=odin
+else ifeq ($(MACHINEBUILD),geniuse3hd)
+brands=odin
+else ifeq ($(MACHINEBUILD),evoe3hd)
+brands=odin
+else ifeq ($(MACHINEBUILD),axase3)
+brands=odin
+else ifeq ($(MACHINEBUILD),axase3c)
+brands=odin
+else ifeq ($(MACHINEBUILD),maram9)
+brands=odin
+else ifeq ($(MACHINEBUILD),ventonhdx)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezam5000hd)
+brands=ini
+else ifeq ($(MACHINEBUILD),beyonwizt3)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezam1000hd)
+brands=ini
+else ifeq ($(MACHINEBUILD),sezammarvel)
+brands=ini
+else ifeq ($(MACHINEBUILD),xpeedlx)
+brands=ini
+else ifeq ($(MACHINEBUILD),xpeedlx3)
+brands=ini
+else ifeq ($(MACHINEBUILD),mbmini)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio5x00)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio6000)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio6100)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemio6200)
+brands=ini
+else ifeq ($(MACHINEBUILD),atemionemesis)
+brands=ini
+else ifeq ($(MACHINEBUILD),mbtwin)
+brands=ini
+else ifeq ($(MACHINEBUILD),dcube)
+brands=cube
+else ifeq ($(MACHINEBUILD),mkcube)
+brands=cube
+else ifeq ($(MACHINEBUILD),ultima)
+brands=cube
+else ifeq ($(MACHINEBUILD),xp1000mk)
+brands=xp
+else ifeq ($(MACHINEBUILD),xp1000max)
+brands=xp
+else ifeq ($(MACHINEBUILD),sf8)
+brands=xp
+else ifeq ($(MACHINEBUILD),xp1000plus)
+brands=xp
+else ifeq ($(MACHINEBUILD),sogno8800hd)
+brands=blackbox
+else ifeq ($(MACHINEBUILD),uniboxhde)
+brands=blackbox
+else ifeq ($(MACHINEBUILD),enfinity)
+brands=entwopia
+else ifeq ($(MACHINEBUILD),marvel1)
+brands=entwopia
+else ifeq ($(MACHINEBUILD),vuduo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuduo2)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuuno)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo2)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuultimo)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vuzero)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolose)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),vusolo4k)
+brands=vuplus
+else ifeq ($(MACHINEBUILD),gb800se)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800seplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbipbox)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800solo)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800ue)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gb800ueplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbquad)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),gbquadplus)
+brands=gigablue
+else ifeq ($(MACHINEBUILD),dm800)
+brands=dream
+else ifeq ($(MACHINEBUILD),dm7020hd)
+brands=dream
+else ifeq ($(MACHINEBUILD),dm7080)
+brands=dream
+else ifeq ($(MACHINEBUILD),formuler1)
+brands=formuler
+else ifeq ($(MACHINEBUILD),formuler3)
+brands=formuler
+else ifeq ($(MACHINEBUILD),formuler4)
+brands=formuler
+else ifeq ($(MACHINEBUILD),et4x00)
+brands=xtrend
+else ifeq ($(MACHINEBUILD),bre2ze)
+brands=entwopia
+else ifeq ($(MACHINEBUILD),sparktriplex)
+brands=fulan
+else ifeq ($(MACHINEBUILD),sparkreloaded)
+brands=fulan
+else ifeq ($(MACHINEBUILD),sparkone)
+brands=fulan
+else ifeq ($(MACHINEBUILD),arguspingulux)
+brands=fulan
+else ifeq ($(MACHINEBUILD),twinboxlcd)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),singleboxlcd)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),sf208)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),sf228)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),odin2hybrid)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),odinplus)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),opticumtt)
+brands=ini
+else ifeq ($(MACHINEBUILD),xpeedlxcs2)
+brands=ultramini
+else ifeq ($(MACHINEBUILD),xpeedlxcc)
+brands=ultramini
+else ifeq ($(MACHINEBUILD),xpeedlxpro)
+brands=ini
+else ifeq ($(MACHINEBUILD),osmini)
+brands=xcore
+else ifeq ($(MACHINEBUILD),osminiplus)
+brands=xcore
+else ifeq ($(MACHINEBUILD),triplex)
+brands=ax
+else ifeq ($(MACHINEBUILD),spycat)
+brands=xcore
+else ifeq ($(MACHINEBUILD),spycatmini)
+brands=xcore
+else ifeq ($(MACHINEBUILD),e4hd)
+brands=ceryon
+else ifeq ($(MACHINEBUILD),sf3038)
+brands=broadmedia
+else ifeq ($(MACHINEBUILD),sf108)
+brands=tripledot
+else ifeq ($(MACHINEBUILD),sf98)
+brands=tripledot
+else ifeq ($(MACHINEBUILD),mutant51)
+brands=gfutures
+else ifeq ($(MACHINEBUILD),ax51)
+brands=gfutures
+endif
+
+
 BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
