@@ -22,41 +22,15 @@ MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
 BBLAYERS ?= \
-	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-azbox \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ax \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-blackbox \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ceryon \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-cube \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dags \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-dream \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ebox \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-entwopia \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-formuler \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-fulan \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-gfutures \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-gigablue \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ini \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ixuss \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-broadmedia \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-odin \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-protek \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-skylake \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-tripledot \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ultramini \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-vuplus \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-wetek \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xp \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xtrend \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xcore \
 	$(CURDIR)/meta-local \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-$(brands) \
 
 
 CONFFILES = \
