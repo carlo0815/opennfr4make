@@ -223,6 +223,8 @@ else ifeq ($(MACHINEBUILD),e4hd)
 brands=ceryon
 else ifeq ($(MACHINEBUILD),sf3038)
 brands=broadmedia
+else ifeq ($(MACHINEBUILD),sf4008)
+brands=octagon
 else ifeq ($(MACHINEBUILD),sf128)
 brands=broadmedia
 else ifeq ($(MACHINEBUILD),sf138)
@@ -607,6 +609,9 @@ MACHINEBUILD=e4hd
 else ifeq ($(MACHINEBUILD),sf3038)
 MACHINE=g300
 MACHINEBUILD=sf3038
+else ifeq ($(MACHINEBUILD),sf4008)
+MACHINE=sf4008
+MACHINEBUILD=sf4008
 else ifeq ($(MACHINEBUILD),sf128)
 MACHINE=g100
 MACHINEBUILD=sf128
