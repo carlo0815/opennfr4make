@@ -46,8 +46,8 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ini \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ixuss \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-broadmedia \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-octagon \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-odin \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-octagon \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-protek \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-skylake \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-tripledot \
@@ -153,6 +153,9 @@ MACHINEBUILD=tmnanoseplus
 else ifeq ($(MACHINEBUILD),tmnanosem2)
 MACHINE=dags7362
 MACHINEBUILD=tmnanosem2
+else ifeq ($(MACHINEBUILD),tmnanosem2plus)
+MACHINE=dags7362
+MACHINEBUILD=tmnanosem2plus
 else ifeq ($(MACHINEBUILD),tmnanosecombo)
 MACHINE=dags7362
 MACHINEBUILD=tmnanosecombo
@@ -583,6 +586,9 @@ MACHINEBUILD=odinplus
 else ifeq ($(MACHINEBUILD),9911lx)
 MACHINE=7225s
 MACHINEBUILD=9911lx
+else ifeq ($(MACHINEBUILD),e4hdcombo)
+MACHINE=7225s
+MACHINEBUILD=e4hdcombo
 else ifeq ($(MACHINEBUILD),sf238)
 MACHINE=7215s
 MACHINEBUILD=sf238
@@ -611,6 +617,9 @@ MACHINEBUILD=spycat
 else ifeq ($(MACHINEBUILD),spycatmini)
 MACHINE=xc7362
 MACHINEBUILD=spycatmini
+else ifeq ($(MACHINEBUILD),spycatminiplus)
+MACHINE=xc7362
+MACHINEBUILD=spycatminiplus
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
@@ -623,6 +632,9 @@ MACHINEBUILD=bcm7358
 else ifeq ($(MACHINEBUILD),vp7358ci)
 MACHINE=xc7358ci
 MACHINEBUILD=vp7358ci
+else ifeq ($(MACHINEBUILD),osmega)
+MACHINE=xc7346
+MACHINEBUILD=osmega
 
 else ifeq ($(MACHINEBUILD),gb800se)
 MACHINE=gb7325
@@ -670,10 +682,6 @@ MACHINEBUILD=xpeedlxcc
 else ifeq ($(MACHINEBUILD),et7x00mini)
 MACHINE=ultramini
 MACHINEBUILD=et7x00mini
-
-else ifeq ($(MACHINEBUILD),sf4008)
-MACHINE=sf4008
-MACHINEBUILD=sf4008
 
 endif
 
