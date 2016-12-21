@@ -213,6 +213,8 @@ else ifeq ($(MACHINEBUILD),osmini)
 brands=xcore
 else ifeq ($(MACHINEBUILD),osminiplus)
 brands=xcore
+else ifeq ($(MACHINEBUILD),osmega)
+brands=xcore
 else ifeq ($(MACHINEBUILD),triplex)
 brands=ax
 else ifeq ($(MACHINEBUILD),spycat)
@@ -594,6 +596,9 @@ MACHINEBUILD=osmini
 else ifeq ($(MACHINEBUILD),osminiplus)
 MACHINE=xc7362
 MACHINEBUILD=osminiplus
+else ifeq ($(MACHINEBUILD),osmega)
+MACHINE=xc7346
+MACHINEBUILD=osmega
 else ifeq ($(MACHINEBUILD),triplex)
 MACHINE=triplex
 MACHINEBUILD=triplex
