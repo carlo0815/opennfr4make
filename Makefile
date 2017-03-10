@@ -210,6 +210,8 @@ MACHINEBUILD=purehd
 else ifeq ($(MACHINEBUILD),force2plushv)
 MACHINE=dags73625
 MACHINEBUILD=force2plushv
+else ifeq ($(MACHINEBUILD),ET11000)
+brands=xtrend
 
 else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
@@ -685,6 +687,9 @@ MACHINEBUILD=et7x00mini
 else ifeq ($(MACHINEBUILD),sf4008)
 MACHINE=sf4008
 MACHINEBUILD=sf4008
+else ifeq ($(MACHINEBUILD),et1x000)
+MACHINE=ET11000
+MACHINEBUILD=ET11000
 
 endif
 
