@@ -183,6 +183,8 @@ else ifeq ($(MACHINEBUILD),formuler4)
 brands=formuler
 else ifeq ($(MACHINEBUILD),et4x00)
 brands=xtrend
+else ifeq ($(MACHINEBUILD),ET11000)
+brands=xtrend
 else ifeq ($(MACHINEBUILD),bre2ze)
 brands=entwopia
 else ifeq ($(MACHINEBUILD),sparktriplex)
@@ -639,6 +641,9 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),ax51)
 MACHINE=hd51
 MACHINEBUILD=ax51
+else ifeq ($(MACHINEBUILD),et1x000)
+MACHINE=ET11000
+MACHINEBUILD=ET11000
 endif
 
 initialize: init
