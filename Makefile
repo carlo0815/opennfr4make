@@ -22,12 +22,12 @@ MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
 BBLAYERS ?= \
-	$(CURDIR)/opennfr-meta-openembedded/meta-oe \
-	$(CURDIR)/opennfr-meta-openembedded/meta-multimedia \
-	$(CURDIR)/opennfr-meta-openembedded/meta-networking \
-	$(CURDIR)/opennfr-meta-openembedded/meta-filesystems \
-	$(CURDIR)/opennfr-meta-openembedded/meta-python \
-	$(CURDIR)/opennfr-openembedded-core/meta \
+	$(CURDIR)/meta-openembedded/meta-oe \
+	$(CURDIR)/meta-openembedded/meta-multimedia \
+	$(CURDIR)/meta-openembedded/meta-networking \
+	$(CURDIR)/meta-openembedded/meta-filesystems \
+	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-qt5 \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
@@ -807,7 +807,7 @@ $(TOPDIR)/env.source: $(DEPDIR)/.env.source.$(BITBAKE_ENV_HASH)
 	@echo 'export MACHINE=$(MACHINE)' >> $@
 	@echo 'export DISTRO=$(DISTRO)' >> $@
 	@echo 'export MACHINEBUILD=$(MACHINEBUILD)' >> $@
-	@echo 'export PATH=$(CURDIR)/opennfr-openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
+	@echo 'export PATH=$(CURDIR)/openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
 	@echo 'if [[ $$BB_NO_NETWORK -eq 1 ]]; then' >> $@
 	@echo ' export BB_SRCREV_POLICY="cache"' >> $@
 	@echo ' echo -e "\e[95mforced offline mode\e[0m"' >> $@
