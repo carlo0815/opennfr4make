@@ -12,7 +12,7 @@ DISTRO ?= opennfr
 ONLINECHECK_URL ?= "http://google.com"
 ONLINECHECK_TIMEOUT ?= 2
 
-BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(MACHINE)
+BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(DISTRO_TYPE)/$(MACHINE)
 TOPDIR = $(BUILD_DIR)
 DL_DIR = $(CURDIR)/sources
 SSTATE_DIR = $(CURDIR)/builds/$(DISTRO)/sstate-cache
@@ -21,14 +21,15 @@ DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
-
 BBLAYERS ?= \
-	$(CURDIR)/meta-openembedded/meta-oe \
-	$(CURDIR)/meta-openembedded/meta-multimedia \
-	$(CURDIR)/meta-openembedded/meta-networking \
-	$(CURDIR)/meta-openembedded/meta-filesystems \
-	$(CURDIR)/meta-openembedded/meta-python \
-	$(CURDIR)/openembedded-core/meta \
+	$(CURDIR)/opennfr-meta-openembedded/meta-oe \
+	$(CURDIR)/opennfr-meta-openembedded/meta-multimedia \
+	$(CURDIR)/opennfr-meta-openembedded/meta-networking \
+	$(CURDIR)/opennfr-meta-openembedded/meta-filesystems \
+	$(CURDIR)/opennfr-meta-openembedded/meta-python \
+	$(CURDIR)/opennfr-openembedded-core/meta \
+	$(CURDIR)/meta-oe-alliance/meta-oe \
+	$(CURDIR)/meta-qt5 \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-azbox \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ax \
@@ -47,19 +48,20 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ixuss \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-broadmedia \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-odin \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-odroid \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-octagon \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-protek \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-skylake \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-tiviar \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-tripledot \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ultramini \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-vuplus \
-	$(CURDIR)/meta-oe-alliance/meta-brands/meta-wetek \
+    	$(CURDIR)/meta-oe-alliance/meta-brands/meta-wetek \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xp \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xtrend \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-xcore \
-	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-local \
-	
+
 
 CONFFILES = \
 	$(TOPDIR)/env.source \
@@ -87,7 +89,7 @@ all: init
 	@echo "Openembedded for the oe-alliance environment has been initialized"
 	@echo "properly. Now you can start building your image, by doing either:"
 	@echo
-	@echo "MACHINE=mutant2400 DISTRO=opennfr DISTRO_TYPE=release make image"
+	@echo "MACHINE=mutant2400 DISTRO=openatv make image"
 	@echo "	or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
@@ -153,6 +155,9 @@ MACHINEBUILD=tmnanoseplus
 else ifeq ($(MACHINEBUILD),tmnanosem2)
 MACHINE=dags7362
 MACHINEBUILD=tmnanosem2
+else ifeq ($(MACHINEBUILD),tmnanom3)
+MACHINE=dags7362
+MACHINEBUILD=tmnanom3
 else ifeq ($(MACHINEBUILD),tmnanosem2plus)
 MACHINE=dags7362
 MACHINEBUILD=tmnanosem2plus
@@ -207,11 +212,24 @@ MACHINEBUILD=fusionhdse
 else ifeq ($(MACHINEBUILD),purehd)
 MACHINE=dags7362
 MACHINEBUILD=purehd
+else ifeq ($(MACHINEBUILD),force2nano)
+MACHINE=dags7362
+MACHINEBUILD=force2nano
 else ifeq ($(MACHINEBUILD),force2plushv)
 MACHINE=dags73625
 MACHINEBUILD=force2plushv
-else ifeq ($(MACHINEBUILD),ET11000)
-brands=xtrend
+else ifeq ($(MACHINEBUILD),force3uhdplus)
+MACHINE=dags7252
+MACHINEBUILD=force3uhdplus
+else ifeq ($(MACHINEBUILD),force3uhd)
+MACHINE=dags7252
+MACHINEBUILD=force3uhd
+else ifeq ($(MACHINEBUILD),revo4k)
+MACHINE=dags7252
+MACHINEBUILD=revo4k
+else ifeq ($(MACHINEBUILD),tmtwin4k)
+MACHINE=dags7252
+MACHINEBUILD=tmtwin4k
 
 else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
@@ -302,9 +320,9 @@ MACHINEBUILD=beyonwizt2
 else ifeq ($(MACHINEBUILD),opticumtt)
 MACHINE=inihde2
 MACHINEBUILD=opticumtt
-else ifeq ($(MACHINEBUILD),xpeedlxpro)
+else ifeq ($(MACHINEBUILD),evoslim)
 MACHINE=inihde2
-MACHINEBUILD=xpeedlxpro
+MACHINEBUILD=evoslim
 else ifeq ($(MACHINEBUILD),sezammarvel)
 MACHINE=inihdp
 MACHINEBUILD=sezammarvel
@@ -426,6 +444,15 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),ax51)
 MACHINE=hd51
 MACHINEBUILD=ax51
+else ifeq ($(MACHINEBUILD),bre2ze4k)
+MACHINE=hd51
+MACHINEBUILD=bre2ze4k
+else ifeq ($(MACHINEBUILD),vimastec1500)
+MACHINE=vs1500
+MACHINEBUILD=vimastec1500
+else ifeq ($(MACHINEBUILD),vimastec1000)
+MACHINE=vs1000
+MACHINEBUILD=vimastec1000
 
 else ifeq ($(MACHINEBUILD),amiko8900)
 MACHINE=spark
@@ -492,6 +519,9 @@ MACHINEBUILD=dynaspark7162
 else ifeq ($(MACHINEBUILD),sf98)
 MACHINE=yh7362
 MACHINEBUILD=sf98
+else ifeq ($(MACHINEBUILD),evopanda)
+MACHINE=yh7362
+MACHINEBUILD=evopanda
 else ifeq ($(MACHINEBUILD),t2cable)
 MACHINE=jj7362
 MACHINEBUILD=t2cable
@@ -535,12 +565,21 @@ MACHINEBUILD=zgemmah2s
 else ifeq ($(MACHINEBUILD),zgemmah2h)
 MACHINE=h3
 MACHINEBUILD=zgemmah2h
+else ifeq ($(MACHINEBUILD),zgemmah32tc)
+MACHINE=h3
+MACHINEBUILD=zgemmah32tc
 else ifeq ($(MACHINEBUILD),zgemmaslc)
 MACHINE=lc
 MACHINEBUILD=zgemmaslc
 else ifeq ($(MACHINEBUILD),zgemmah5)
 MACHINE=h5
 MACHINEBUILD=zgemmah5
+else ifeq ($(MACHINEBUILD),zgemmah52s)
+MACHINE=h5
+MACHINEBUILD=zgemmah52s
+else ifeq ($(MACHINEBUILD),zgemmah52tc)
+MACHINE=h5
+MACHINEBUILD=zgemmah52tc
 else ifeq ($(MACHINEBUILD),zgemmai55)
 MACHINE=i55
 MACHINEBUILD=zgemmai55
@@ -553,11 +592,29 @@ MACHINEBUILD=novacombo
 else ifeq ($(MACHINEBUILD),novatwin)
 MACHINE=h3
 MACHINEBUILD=novatwin
+else ifeq ($(MACHINEBUILD),zgemmah3ac)
+MACHINE=h3
+MACHINEBUILD=zgemmah3ac
+else ifeq ($(MACHINEBUILD),zgemmah5ac)
+MACHINE=h5
+MACHINEBUILD=zgemmah5ac
+else ifeq ($(MACHINEBUILD),zgemmah52splus)
+MACHINE=h5
+MACHINEBUILD=zgemmah52splus
+else ifeq ($(MACHINEBUILD),zgemmah2splus)
+MACHINE=h3
+MACHINEBUILD=zgemmah2splus
+else ifeq ($(MACHINEBUILD),zgemmah7)
+MACHINE=h7
+MACHINEBUILD=zgemmah7
 
 
 else ifeq ($(MACHINEBUILD),mbmicro)
 MACHINE=7000s
 MACHINEBUILD=mbmicro
+else ifeq ($(MACHINEBUILD),mbmicrov2)
+MACHINE=7005s
+MACHINEBUILD=mbmicrov2
 else ifeq ($(MACHINEBUILD),e4hd)
 MACHINE=7000s
 MACHINEBUILD=e4hd
@@ -568,7 +625,7 @@ else ifeq ($(MACHINEBUILD),twinboxlcd)
 MACHINE=7100s
 MACHINEBUILD=twinboxlcd
 else ifeq ($(MACHINEBUILD),singleboxlcd)
-MACHINE=7100s
+MACHINE=7200s
 MACHINEBUILD=singleboxlcd
 else ifeq ($(MACHINEBUILD),sf208)
 MACHINE=7210s
@@ -611,6 +668,9 @@ MACHINEBUILD=sf128
 else ifeq ($(MACHINEBUILD),sf138)
 MACHINE=g100
 MACHINEBUILD=sf138
+else ifeq ($(MACHINEBUILD),bre2zet2c)
+MACHINE=g101
+MACHINEBUILD=bre2zet2c
 
 
 else ifeq ($(MACHINEBUILD),spycat)
@@ -622,6 +682,9 @@ MACHINEBUILD=spycatmini
 else ifeq ($(MACHINEBUILD),spycatminiplus)
 MACHINE=xc7362
 MACHINEBUILD=spycatminiplus
+else ifeq ($(MACHINEBUILD),spycat4kmini)
+MACHINE=xc7439
+MACHINEBUILD=spycat4kmini
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
@@ -659,6 +722,9 @@ MACHINEBUILD=gbultrase
 else ifeq ($(MACHINEBUILD),gbultraue)
 MACHINE=gb7362
 MACHINEBUILD=gbultraue
+else ifeq ($(MACHINEBUILD),gbultraueh)
+MACHINE=gb73625
+MACHINEBUILD=gbultraueh
 else ifeq ($(MACHINEBUILD),gbx1)
 MACHINE=gb7362
 MACHINEBUILD=gbx1
@@ -668,12 +734,18 @@ MACHINEBUILD=gbx2
 else ifeq ($(MACHINEBUILD),gbx3)
 MACHINE=gb7362
 MACHINEBUILD=gbx3
+else ifeq ($(MACHINEBUILD),gbx3h)
+MACHINE=gb73625
+MACHINEBUILD=gbx3h
 else ifeq ($(MACHINEBUILD),gbquad)
 MACHINE=gb7356
 MACHINEBUILD=gbquad
 else ifeq ($(MACHINEBUILD),gbquadplus)
 MACHINE=gb7356
 MACHINEBUILD=gbquadplus
+else ifeq ($(MACHINEBUILD),gbquad4k)
+MACHINE=gb7252
+MACHINEBUILD=gbquad4k
 
 else ifeq ($(MACHINEBUILD),xpeedlxcs2)
 MACHINE=ultramini
@@ -684,12 +756,9 @@ MACHINEBUILD=xpeedlxcc
 else ifeq ($(MACHINEBUILD),et7x00mini)
 MACHINE=ultramini
 MACHINEBUILD=et7x00mini
-else ifeq ($(MACHINEBUILD),sf4008)
-MACHINE=sf4008
-MACHINEBUILD=sf4008
-else ifeq ($(MACHINEBUILD),et1x000)
-MACHINE=ET11000
-MACHINEBUILD=ET11000
+else ifeq ($(MACHINEBUILD),gi11000)
+MACHINE=et1x000
+MACHINEBUILD=gi11000
 
 endif
 
@@ -699,6 +768,9 @@ init: setupmbuild $(BBLAYERS) $(CONFFILES)
 
 image: init
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
+
+clean:
+	@. $(TOPDIR)/env.source && cd $(TOPDIR) && echo -n -e "Performing a clean \e[95mPlease wait... " && bitbake -qqq -c clean $(DISTRO)-image && echo -n -e "\e[93mClean completed.\e[0m"
 
 update:
 	@echo 'Updating Git repositories...'
@@ -735,7 +807,7 @@ $(TOPDIR)/env.source: $(DEPDIR)/.env.source.$(BITBAKE_ENV_HASH)
 	@echo 'export MACHINE=$(MACHINE)' >> $@
 	@echo 'export DISTRO=$(DISTRO)' >> $@
 	@echo 'export MACHINEBUILD=$(MACHINEBUILD)' >> $@
-	@echo 'export PATH=$(CURDIR)/openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
+	@echo 'export PATH=$(CURDIR)/opennfr-openembedded-core/scripts:$(CURDIR)/bitbake/bin:$${PATH}' >> $@
 	@echo 'if [[ $$BB_NO_NETWORK -eq 1 ]]; then' >> $@
 	@echo ' export BB_SRCREV_POLICY="cache"' >> $@
 	@echo ' echo -e "\e[95mforced offline mode\e[0m"' >> $@
@@ -763,7 +835,6 @@ $(DISTRO)_CONF_HASH := $(call hash, \
 $(TOPDIR)/conf/$(DISTRO).conf: $(DEPDIR)/.$(DISTRO).conf.$($(DISTRO)_CONF_HASH)
 	@echo 'Generating $@'
 	@test -d $(@D) || mkdir -p $(@D)
-	@echo 'DISTRO_TYPE = "$(DISTRO_TYPE)"' >> $@
 	@echo 'SSTATE_DIR = "$(SSTATE_DIR)"' >> $@
 	@echo 'TMPDIR = "$(TMPDIR)"' >> $@
 	@echo 'BB_GENERATE_MIRROR_TARBALLS = "1"' >> $@
@@ -784,11 +855,11 @@ $(TOPDIR)/conf/local.conf: $(DEPDIR)/.local.conf.$(LOCAL_CONF_HASH)
 	@echo 'Generating $@'
 	@test -d $(@D) || mkdir -p $(@D)
 	@echo 'TOPDIR = "$(TOPDIR)"' > $@
-	@echo 'MACHINE = "$(MACHINE)"' >> $@
+	@echo 'MACHINE = "$(MACHINE)"' >> $@	
 	@echo 'require $(TOPDIR)/conf/$(DISTRO).conf' >> $@
 
 $(TOPDIR)/conf/site.conf: $(CURDIR)/site.conf
-	@ln -s ../../../../site.conf $@
+	@ln -s ../../../../../site.conf $@
 
 $(CURDIR)/site.conf:
 	@echo 'SCONF_VERSION = "1"' >> $@
@@ -799,7 +870,7 @@ $(CURDIR)/site.conf:
 	@echo 'INHERIT += "rm_work"' >> $@
 
 BBLAYERS_CONF_HASH := $(call hash, \
-	'BBLAYERS_CONF_VERSION = "0"' \
+	'BBLAYERS_CONF_VERSION = "5"' \
 	'CURDIR = "$(CURDIR)"' \
 	'BBLAYERS = "$(BBLAYERS)"' \
 	)
@@ -807,7 +878,7 @@ BBLAYERS_CONF_HASH := $(call hash, \
 $(TOPDIR)/conf/bblayers.conf: $(DEPDIR)/.bblayers.conf.$(BBLAYERS_CONF_HASH)
 	@echo 'Generating $@'
 	@test -d $(@D) || mkdir -p $(@D)
-	@echo 'LCONF_VERSION = "4"' >> $@
+	@echo 'LCONF_VERSION = "4"' > $@
 	@echo 'BBFILES = ""' >> $@
 	@echo 'BBLAYERS = "$(BBLAYERS)"' >> $@
 
