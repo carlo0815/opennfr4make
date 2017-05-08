@@ -12,7 +12,7 @@ DISTRO ?= opennfr
 ONLINECHECK_URL ?= "http://google.com"
 ONLINECHECK_TIMEOUT ?= 2
 
-BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(DISTRO_TYPE)/$(MACHINE)
+BUILD_DIR = $(CURDIR)/builds/$(DISTRO)/$(MACHINE)
 TOPDIR = $(BUILD_DIR)
 DL_DIR = $(CURDIR)/sources
 SSTATE_DIR = $(CURDIR)/builds/$(DISTRO)/sstate-cache
@@ -89,7 +89,7 @@ all: init
 	@echo "Openembedded for the oe-alliance environment has been initialized"
 	@echo "properly. Now you can start building your image, by doing either:"
 	@echo
-	@echo "MACHINE=mutant2400 DISTRO=openatv make image"
+	@echo "MACHINE=mutant2400 DISTRO=opennfr make image"
 	@echo "	or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
