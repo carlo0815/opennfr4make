@@ -27,6 +27,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-networking \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
+	$(CURDIR)/meta-openembedded/meta-webserver \
 	$(CURDIR)/openembedded-core/meta \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/meta-qt5 \
