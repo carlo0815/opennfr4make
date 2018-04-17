@@ -775,7 +775,7 @@ else ifeq ($(MACHINEBUILD),anadol4k)
 MACHINE=u5
 MACHINEBUILD=anadol4k
 else ifeq ($(MACHINEBUILD),axashis4kcombo)
-MACHINE=u5
+MACHINE=u51
 MACHINEBUILD=axashis4kcombo
 else ifeq ($(MACHINEBUILD),dinobot4kl)
 MACHINE=u5
