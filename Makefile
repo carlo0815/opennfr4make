@@ -818,6 +818,12 @@ image: init
 	else \
 	patch -p1 < oe-core-package_manager-temp.patch; \
 	fi
+	@if grep "#temporary 3rdparty fix" meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb > /dev/null; \
+ 	then \
+ 	echo '3rdparty already patched, skipping ...'; \
+	else \
+ 	patch -p1 < 3rdparty-delete-packages.patch; \
+ 	fi
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
 
 clean:
