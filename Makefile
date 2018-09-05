@@ -824,6 +824,7 @@ image: init
 	else \
 	patch -p1 < 3rdparty-delete-packages.patch; \
 	fi
+
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
 
 clean:
