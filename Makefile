@@ -823,7 +823,7 @@ image: init
 	echo '3rdparty already patched, skipping ...'; \
 	else \
  	patch -p1 < 3rdparty-delete-packages.patch; \
- 	fi
+	fi
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
 
 clean:
