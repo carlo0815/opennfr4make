@@ -822,7 +822,7 @@ image: init
 	then \
 	echo '3rdparty already patched, skipping ...'; \
 	else \
-	patch -p1 < 3rdparty-delete-packages.patch; \
+	patch -p1 < enigma2_3rdparty_delete_packages-fix.patch; \
 	fi
 
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
