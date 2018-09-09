@@ -1,5 +1,14 @@
 --- ./meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb
 +++ ./meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb
+@@ -11,7 +11,7 @@
+ SRCREV = "${AUTOREV}"
+ PV = "${IMAGE_VERSION}+gitr${SRCPV}"
+ PKGV = "${IMAGE_VERSION}+gitr${GITPKGV}"
+-PR = "r170"
++PR = "r171"
+ 
+ SRC_URI="git://github.com/oe-alliance/3rdparty-plugins.git;protocol=git"
+ 
 @@ -27,6 +27,8 @@
  
  S = "${WORKDIR}/git"
