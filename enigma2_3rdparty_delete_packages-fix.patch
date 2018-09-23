@@ -8,8 +8,8 @@
 +
  THIRDPARTY_PLUGINS = " \
      enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
-     enigma2-plugin-extensions-bluray_1.6rc1_all.ipk \
-@@ -35,7 +37,6 @@
+     enigma2-plugin-extensions-bluray_2.0rc1_all.ipk \
+@@ -35,7 +35,6 @@
      enigma2-plugin-extensions-chefkoch_1.5rc5_all.ipk \
      enigma2-plugin-extensions-clevertanken_0.8rc2_all.ipk \
      enigma2-plugin-extensions-csfd_11-55-20160929_all.ipk \
@@ -17,16 +17,16 @@
      enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
      enigma2-plugin-extensions-digitalfernsehen_1.2rc1_all.ipk \
      enigma2-plugin-extensions-dvrproviderplayer_2.06_all.ipk \
-@@ -50,8 +51,6 @@
+@@ -50,8 +49,6 @@
      enigma2-plugin-extensions-hetweer_4.2r9_all.ipk \
      enigma2-plugin-extensions-ipchecker_002_all.ipk \
-     ${@bb.utils.contains("TARGET_ARCH", "sh4", "enigma2-plugin-extensions-isettinge2-3.4.2-oe2.0-all-sh4.ipk" , "", d)} \
--    ${@bb.utils.contains("TARGET_ARCH", "mipsel", "enigma2-plugin-extensions-isettinge2_3.4.2-oe2.0-all-mips_all.ipk" , "", d)} \
--    ${@bb.utils.contains("TARGET_ARCH", "arm", "enigma2-plugin-extensions-isettinge2-3.4.2-oe2.0-all-arm.ipk" , "", d)} \
+     ${@bb.utils.contains("TARGET_ARCH", "sh4", "enigma2-plugin-extensions-isettinge2-3.4.3-oe2.0-all-sh4.ipk" , "", d)} \
+-    ${@bb.utils.contains("TARGET_ARCH", "mipsel", "enigma2-plugin-extensions-isettinge2_3.4.3-oe2.0-all-mips_all.ipk" , "", d)} \
+-    ${@bb.utils.contains("TARGET_ARCH", "arm", "enigma2-plugin-extensions-isettinge2-3.4.3-oe2.0-all-arm.ipk" , "", d)} \
      enigma2-plugin-extensions-kicker_3.6rc5_all.ipk \
      enigma2-plugin-extensions-kino_1.8rc1_all.ipk \
      enigma2-plugin-extensions-livefootball_7.1_all.ipk \
-@@ -62,8 +61,6 @@
+@@ -62,8 +59,6 @@
      enigma2-plugin-extensions-mspfs_1.06_all.ipk \
      enigma2-plugin-extensions-netspeedtest_1.0rc1_all.ipk \
      ${@bb.utils.contains('MACHINE_BRAND', 'Vu+', '' , 'enigma2-plugin-extensions-openopera_1.0-r0_mips32el.ipk', d)} \
