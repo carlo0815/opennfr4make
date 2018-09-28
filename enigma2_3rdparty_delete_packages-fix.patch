@@ -1,15 +1,15 @@
 --- ./meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb
 +++ ./meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb
-@@ -27,6 +27,8 @@
+@@ -26,6 +26,8 @@
+ PACKAGE_ARCH = "${MACHINE_ARCH}"
  
  S = "${WORKDIR}/git"
- 
-+#temporary 3rdparty fix
 +
++#temporary 3rdparty fix
+ 
  THIRDPARTY_PLUGINS = " \
      enigma2-plugin-extensions-atmolightd_0.7-pre22_all.ipk \
-     enigma2-plugin-extensions-bluray_2.0rc1_all.ipk \
-@@ -35,7 +37,6 @@
+@@ -36,7 +38,6 @@
      enigma2-plugin-extensions-chefkoch_1.5rc5_all.ipk \
      enigma2-plugin-extensions-clevertanken_0.8rc2_all.ipk \
      enigma2-plugin-extensions-csfd_11-55-20160929_all.ipk \
@@ -17,7 +17,7 @@
      enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
      enigma2-plugin-extensions-digitalfernsehen_1.2rc1_all.ipk \
      enigma2-plugin-extensions-dvrproviderplayer_2.06_all.ipk \
-@@ -50,8 +51,6 @@
+@@ -51,8 +52,6 @@
      enigma2-plugin-extensions-hetweer_4.2r9_all.ipk \
      enigma2-plugin-extensions-ipchecker_002_all.ipk \
      ${@bb.utils.contains("TARGET_ARCH", "sh4", "enigma2-plugin-extensions-isettinge2-3.4.3-oe2.0-all-sh4.ipk" , "", d)} \
@@ -26,7 +26,7 @@
      enigma2-plugin-extensions-kicker_3.6rc5_all.ipk \
      enigma2-plugin-extensions-kino_1.8rc1_all.ipk \
      enigma2-plugin-extensions-livefootball_7.1_all.ipk \
-@@ -62,8 +61,6 @@
+@@ -63,8 +62,6 @@
      enigma2-plugin-extensions-mspfs_1.06_all.ipk \
      enigma2-plugin-extensions-netspeedtest_1.0rc1_all.ipk \
      ${@bb.utils.contains('MACHINE_BRAND', 'Vu+', '' , 'enigma2-plugin-extensions-openopera_1.0-r0_mips32el.ipk', d)} \
