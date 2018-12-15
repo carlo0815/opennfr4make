@@ -222,6 +222,9 @@ MACHINEBUILD=force2nano
 else ifeq ($(MACHINEBUILD),force2plushv)
 MACHINE=dags73625
 MACHINEBUILD=force2plushv
+else ifeq ($(MACHINEBUILD),purehdse)
+MACHINE=dags73625
+MACHINEBUILD=purehdse
 else ifeq ($(MACHINEBUILD),force3uhdplus)
 MACHINE=dags7252
 MACHINEBUILD=force3uhdplus
@@ -234,12 +237,28 @@ MACHINEBUILD=revo4k
 else ifeq ($(MACHINEBUILD),tmtwin4k)
 MACHINE=dags7252
 MACHINEBUILD=tmtwin4k
+else ifeq ($(MACHINEBUILD),galaxy4k)
+MACHINE=dags7252
+MACHINEBUILD=galaxy4k
+else ifeq ($(MACHINEBUILD),tm4ksuper)
+MACHINE=dags7252
+MACHINEBUILD=tm4ksuper
+else ifeq ($(MACHINEBUILD),valalinux)
+MACHINE=dags7362
+MACHINEBUILD=valalinux
 else ifeq ($(MACHINEBUILD),lunix34k)
 MACHINE=dags7252
 MACHINEBUILD=lunix34k
 else ifeq ($(MACHINEBUILD),lunix)
 MACHINE=dags73625
 MACHINEBUILD=lunix
+else ifeq ($(MACHINEBUILD),force4)
+MACHINE=dags72604
+MACHINEBUILD=force4
+else ifeq ($(MACHINEBUILD),lunix4k)
+MACHINE=dags72604
+MACHINEBUILD=lunix4k
+
 
 else ifeq ($(MACHINEBUILD),classm)
 MACHINE=odinm7
@@ -416,6 +435,18 @@ MACHINEBUILD=evomini
 else ifeq ($(MACHINEBUILD),evominiplus)
 MACHINE=ch625lc
 MACHINEBUILD=evominiplus
+else ifeq ($(MACHINEBUILD),vipert2c)
+MACHINE=yh625tc
+MACHINEBUILD=vipert2c
+else ifeq ($(MACHINEBUILD),vipercombo)
+MACHINE=yh625dt
+MACHINEBUILD=vipercombo
+else ifeq ($(MACHINEBUILD),vipercombohdd)
+MACHINE=ch625dt
+MACHINEBUILD=vipercombohdd
+else ifeq ($(MACHINEBUILD),viperslim)
+MACHINE=yh73625
+MACHINEBUILD=viperslim
 
 
 else ifeq ($(MACHINEBUILD),mutant2400)
@@ -451,12 +482,12 @@ MACHINEBUILD=mutant530c
 else ifeq ($(MACHINEBUILD),mutant51)
 MACHINE=hd51
 MACHINEBUILD=mutant51
-else ifeq ($(MACHINEBUILD),ax51)
-MACHINE=hd51
-MACHINEBUILD=ax51
 else ifeq ($(MACHINEBUILD),mutant60)
 MACHINE=hd60
 MACHINEBUILD=mutant60
+else ifeq ($(MACHINEBUILD),ax51)
+MACHINE=hd51
+MACHINEBUILD=ax51
 else ifeq ($(MACHINEBUILD),ax60)
 MACHINE=hd60
 MACHINEBUILD=ax60
@@ -538,9 +569,12 @@ MACHINEBUILD=dynaspark7162
 else ifeq ($(MACHINEBUILD),sf98)
 MACHINE=yh7362
 MACHINEBUILD=sf98
-else ifeq ($(MACHINEBUILD),evopanda)
+else ifeq ($(MACHINEBUILD),evoslimse)
 MACHINE=yh7362
-MACHINEBUILD=evopanda
+MACHINEBUILD=evoslimse
+else ifeq ($(MACHINEBUILD),evoslimt2c)
+MACHINE=yh62tc
+MACHINEBUILD=evoslimt2c
 else ifeq ($(MACHINEBUILD),t2cable)
 MACHINE=jj7362
 MACHINEBUILD=t2cable
@@ -614,6 +648,9 @@ MACHINEBUILD=novatwin
 else ifeq ($(MACHINEBUILD),zgemmah3ac)
 MACHINE=h3
 MACHINEBUILD=zgemmah3ac
+else ifeq ($(MACHINEBUILD),zgemmah4)
+MACHINE=h4
+MACHINEBUILD=zgemmah4
 else ifeq ($(MACHINEBUILD),zgemmah5ac)
 MACHINE=h5
 MACHINEBUILD=zgemmah5ac
@@ -626,6 +663,30 @@ MACHINEBUILD=zgemmah2splus
 else ifeq ($(MACHINEBUILD),zgemmah7)
 MACHINE=h7
 MACHINEBUILD=zgemmah7
+else ifeq ($(MACHINEBUILD),zgemmah6)
+MACHINE=h6
+MACHINEBUILD=zgemmah6
+else ifeq ($(MACHINEBUILD),zgemmah9s)
+MACHINE=h9
+MACHINEBUILD=zgemmah9s
+else ifeq ($(MACHINEBUILD),zgemmah9t)
+MACHINE=h9
+MACHINEBUILD=zgemmah9t
+else ifeq ($(MACHINEBUILD),zgemmah92s)
+MACHINE=h9
+MACHINEBUILD=zgemmah92s
+else ifeq ($(MACHINEBUILD),zgemmah92h)
+MACHINE=h9
+MACHINEBUILD=zgemmah92h
+else ifeq ($(MACHINEBUILD),zgemmah9splus)
+MACHINE=h9
+MACHINEBUILD=zgemmah9splus
+else ifeq ($(MACHINEBUILD),zgemmai55plus)
+MACHINE=i55plus
+MACHINEBUILD=zgemmai55plus
+else ifeq ($(MACHINEBUILD),zgemmah9combo)
+MACHINE=h9combo
+MACHINEBUILD=zgemmah9combo
 
 
 else ifeq ($(MACHINEBUILD),mbmicro)
@@ -664,6 +725,9 @@ MACHINEBUILD=odinplus
 else ifeq ($(MACHINEBUILD),9911lx)
 MACHINE=7225s
 MACHINEBUILD=9911lx
+else ifeq ($(MACHINEBUILD),9920lx)
+MACHINE=7225s
+MACHINEBUILD=9920lx
 else ifeq ($(MACHINEBUILD),e4hdcombo)
 MACHINE=7225s
 MACHINEBUILD=e4hdcombo
@@ -676,6 +740,10 @@ MACHINEBUILD=twinboxlcdci5
 else ifeq ($(MACHINEBUILD),e4hdultra)
 MACHINE=8100s
 MACHINEBUILD=e4hdultra
+else ifeq ($(MACHINEBUILD),protek4k)
+MACHINE=8100s
+MACHINEBUILD=protek4k
+
 
 else ifeq ($(MACHINEBUILD),mbtwinplus)
 MACHINE=g300
@@ -683,6 +751,9 @@ MACHINEBUILD=mbtwinplus
 else ifeq ($(MACHINEBUILD),sf3038)
 MACHINE=g300
 MACHINEBUILD=sf3038
+else ifeq ($(MACHINEBUILD),alphatriple)
+MACHINE=g300
+MACHINEBUILD=alphatriple
 else ifeq ($(MACHINEBUILD),sf128)
 MACHINE=g100
 MACHINEBUILD=sf128
@@ -706,6 +777,12 @@ MACHINEBUILD=spycatminiplus
 else ifeq ($(MACHINEBUILD),spycat4kmini)
 MACHINE=xc7439
 MACHINEBUILD=spycat4kmini
+else ifeq ($(MACHINEBUILD),spycat4k)
+MACHINE=xc7439
+MACHINEBUILD=spycat4k
+else ifeq ($(MACHINEBUILD),spycat4kcombo)
+MACHINE=xc7439
+MACHINEBUILD=spycat4kcombo
 else ifeq ($(MACHINEBUILD),osmini)
 MACHINE=xc7362
 MACHINEBUILD=osmini
@@ -783,15 +860,24 @@ MACHINEBUILD=et7x00mini
 else ifeq ($(MACHINEBUILD),gi11000)
 MACHINE=et1x000
 MACHINEBUILD=gi11000
+else ifeq ($(MACHINEBUILD),beyonwizu4)
+MACHINE=et13000
+MACHINEBUILD=beyonwizu4
 
 else ifeq ($(MACHINEBUILD),anadol4k)
 MACHINE=u5
 MACHINEBUILD=anadol4k
+else ifeq ($(MACHINEBUILD),anadol4kv2)
+MACHINE=u51
+MACHINEBUILD=anadol4kv2
+else ifeq ($(MACHINEBUILD),anadol4kcombo)
+MACHINE=u51
+MACHINEBUILD=anadol4kcombo
 else ifeq ($(MACHINEBUILD),axashis4kcombo)
 MACHINE=u51
 MACHINEBUILD=axashis4kcombo
 else ifeq ($(MACHINEBUILD),dinobot4kl)
-MACHINE=u5
+MACHINE=u51
 MACHINEBUILD=dinobot4kl
 else ifeq ($(MACHINEBUILD),dinobot4k)
 MACHINE=u5
@@ -802,6 +888,9 @@ MACHINEBUILD=mediabox4k
 else ifeq ($(MACHINEBUILD),dinobot4kse)
 MACHINE=u5pvr
 MACHINEBUILD=dinobot4kse
+else ifeq ($(MACHINEBUILD),ferguson4k)
+MACHINE=u5pvr
+MACHINEBUILD=ferguson4k
 else ifeq ($(MACHINEBUILD),dinobot4kplus)
 MACHINE=u52
 MACHINEBUILD=dinobot4kplus
@@ -811,6 +900,10 @@ MACHINEBUILD=axashis4kcomboplus
 else ifeq ($(MACHINEBUILD),dinobot4kmini)
 MACHINE=u53
 MACHINEBUILD=dinobot4kmini
+
+else ifeq ($(MACHINEBUILD),clap4k)
+MACHINE=cc1
+MACHINEBUILD=clap4k
 
 endif
 
