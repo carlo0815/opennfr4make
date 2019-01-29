@@ -485,6 +485,9 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),mutant60)
 MACHINE=hd60
 MACHINEBUILD=mutant60
+else ifeq ($(MACHINEBUILD),mutant61)
+MACHINE=hd61
+MACHINEBUILD=mutant61
 else ifeq ($(MACHINEBUILD),ax51)
 MACHINE=hd51
 MACHINEBUILD=ax51
@@ -900,10 +903,29 @@ MACHINEBUILD=axashis4kcomboplus
 else ifeq ($(MACHINEBUILD),dinobot4kmini)
 MACHINE=u53
 MACHINEBUILD=dinobot4kmini
+else ifeq ($(MACHINEBUILD),dinobot4kpro)
+MACHINE=u54
+MACHINEBUILD=dinobot4kpro
+else ifeq ($(MACHINEBUILD),dinobotu55)
+MACHINE=u55
+MACHINEBUILD=dinobotu55
+else ifeq ($(MACHINEBUILD),dinoboth265)
+MACHINE=u41
+MACHINEBUILD=dinoboth265
 
 else ifeq ($(MACHINEBUILD),clap4k)
 MACHINE=cc1
 MACHINEBUILD=clap4k
+
+else ifeq ($(MACHINEBUILD),ultrav8plus)
+MACHINE=v8plus
+MACHINEBUILD=ultrav8plus
+else ifeq ($(MACHINEBUILD),maxytecmulti)
+MACHINE=multibox
+MACHINEBUILD=maxytecmulti
+else ifeq ($(MACHINEBUILD),anadolmulti)
+MACHINE=multibox
+MACHINEBUILD=anadolmulti
 
 endif
 
