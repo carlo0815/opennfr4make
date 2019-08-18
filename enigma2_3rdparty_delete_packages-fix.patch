@@ -17,8 +17,7 @@
      enigma2-plugin-extensions-cyrussettings_1.0.0_all.ipk \
      enigma2-plugin-extensions-digitalfernsehen_1.2rc1_all.ipk \
      enigma2-plugin-extensions-dvrproviderplayer_2.06_all.ipk \
-@@ -51,5 +52,3 @@
-     enigma2-plugin-extensions-hetweer_4.2r9_all.ipk \
+@@ -51,4 +52,2 @@
      enigma2-plugin-extensions-ipchecker_002_all.ipk \
      ${@bb.utils.contains("TARGET_ARCH", "sh4", "enigma2-plugin-extensions-isettinge2-3.4.4-oe2.0-all-sh4.ipk" , "", d)} \
 -    ${@bb.utils.contains("TARGET_ARCH", "mipsel", "enigma2-plugin-extensions-isettinge2-3.4.4-oe2.0-all-mips.ipk" , "", d)} \
