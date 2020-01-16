@@ -21,6 +21,18 @@ DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
+METAQT=meta-qt5
+# Use old QT 5.8.0
+ifeq ($(MACHINEBUILD),gbquad4k)
+METAQT=meta-qt5.8
+endif
+ifeq ($(MACHINEBUILD),gbue4k)
+METAQT=meta-qt5.8
+endif
+ifeq ($(MACHINEBUILD),gbx34k)
+METAQT=meta-qt5.8
+endif
+
 BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-oe \
 	$(CURDIR)/meta-openembedded/meta-multimedia \
@@ -854,6 +866,9 @@ MACHINEBUILD=gbquad4k
 else ifeq ($(MACHINEBUILD),gbue4k)
 MACHINE=gb7252
 MACHINEBUILD=gbue4k
+else ifeq ($(MACHINEBUILD),gbx34k)
+MACHINE=gb72604
+MACHINEBUILD=gbx34k
 else ifeq ($(MACHINEBUILD),gbtrio4k)
 MACHINE=gbmv200
 MACHINEBUILD=gbtrio4k
