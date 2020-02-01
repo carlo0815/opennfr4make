@@ -477,7 +477,7 @@ MACHINEBUILD=mutant51
 else ifeq ($(MACHINEBUILD),mutant60)
 MACHINE=hd60
 MACHINEBUILD=mutant60
-else ifeq ($(MACHINEBUILD),mutant61)
+else ifeq ($(MACHINEBUILD),ax61)
 MACHINE=hd61
 MACHINEBUILD=ax61
 else ifeq ($(MACHINEBUILD),ax51)
