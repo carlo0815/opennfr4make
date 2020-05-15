@@ -992,8 +992,7 @@ image: init
 
 clean:
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && echo -n -e "Performing a clean \e[95mPlease wait... " && bitbake -qqq -c clean $(DISTRO)-image && echo -n -e "\e[93mClean completed.\e[0m"
-	@. $(TOPDIR)/env.source && cd $(TOPDIR) && echo -n -e "Performing a clean \e[95mPlease wait... " && bitbake -qqq -c cleanall $(DISTRO)-enigma2 && echo -n -e "\e[93mClean opennfr enigma2 completed.\e[0m"
-
+	
 update:
 	@echo 'Updating Git repositories...'
 	@HASH=`$(XSUM) $(MAKEFILE_LIST)`; \
