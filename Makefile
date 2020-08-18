@@ -974,6 +974,12 @@ initialize: init
 init: setupmbuild $(BBLAYERS) $(CONFFILES)
 
 image: init
+	@if grep "#temporary 3rdparty fix" meta-oe-alliance/meta-oe/recipes-oe-alliance/enigma2-plugins/enigma2-3rdparty-plugins.bb > /dev/null; \
+	then \
+	echo '3rdparty already patched, skipping ...'; \
+	else \
+	patch -p1 < enigma2_3rdparty_delete_packages-fix.patch; \
+	fi
 	@. $(TOPDIR)/env.source && cd $(TOPDIR) && bitbake $(DISTRO)-image
 
 clean:
