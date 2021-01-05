@@ -32,9 +32,6 @@ endif
 ifeq ($(MACHINEBUILD),gbx34k)
 METAQT=meta-qt5.8
 endif
-ifeq ($(MACHINEBUILD),osmini4k)
-METAQT=meta-qt5.14
-endif
 
 BBLAYERS ?= \
 	$(CURDIR)/openembedded-core/meta \
@@ -44,7 +41,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-openembedded/meta-webserver \
-	$(CURDIR)/meta-python2 \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/$(METAQT) \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
