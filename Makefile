@@ -49,6 +49,7 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-webserver \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/$(METAQT) \
+	$(CURDIR)/meta-oe-alliance/meta-brands/meta-abcom \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-airdigital \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-amiko \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-ax \
@@ -1133,6 +1134,8 @@ $(CURDIR)/site.conf:
 	@echo 'BUILD_OPTIMIZATION = "-O2 -pipe"' >> $@
 	@echo 'DL_DIR = "$(DL_DIR)"' >> $@
 	@echo 'INHERIT += "rm_work"' >> $@
+	@echo 'BB_GIT_SHALLOW_DEPTH = "1"' >> $@
+	@echo 'BB_GIT_SHALLOW = "1"' >> $@
 
 BBLAYERS_CONF_HASH := $(call hash, \
 	'BBLAYERS_CONF_VERSION = "5"' \
