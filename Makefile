@@ -21,26 +21,10 @@ DEPDIR = $(TOPDIR)/.deps
 MACHINEBUILD = $(MACHINE)
 export MACHINEBUILD
 
-METAQT=meta-qt5
-# Use old QT 5.8.0
-ifeq ($(MACHINEBUILD),gbquad4k)
-METAQT=meta-qt5.8
-endif
-ifeq ($(MACHINEBUILD),gbue4k)
-METAQT=meta-qt5.8
-endif
-ifeq ($(MACHINEBUILD),gbx34k)
-METAQT=meta-qt5.8
-endif
-ifeq ($(MACHINEBUILD),osmini4k)
-METAQT=meta-qt5.14
-endif
-ifeq ($(MACHINEBUILD),osmio4k)
-METAQT=meta-qt5.14
-endif
-ifeq ($(MACHINEBUILD),osmio4kplus)
-METAQT=meta-qt5.14
-endif
+METAQT=meta-qt5.15
+#ifeq ($(MACHINEBUILD),gbquad4k)
+#METAQT=meta-qt5.15
+#endif
 
 BBLAYERS ?= \
 	$(CURDIR)/openembedded-core/meta \
@@ -50,7 +34,6 @@ BBLAYERS ?= \
 	$(CURDIR)/meta-openembedded/meta-filesystems \
 	$(CURDIR)/meta-openembedded/meta-python \
 	$(CURDIR)/meta-openembedded/meta-webserver \
-	$(CURDIR)/meta-python2 \
 	$(CURDIR)/meta-oe-alliance/meta-oe \
 	$(CURDIR)/$(METAQT) \
 	$(CURDIR)/meta-oe-alliance/meta-brands/meta-abcom \
