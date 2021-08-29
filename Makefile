@@ -103,7 +103,7 @@ all: init
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
 	@echo "To build image without feed:"
-	@echo "MACHINE=mutant2400 DISTRO=opnenfr make enigma2-image"
+	@echo "MACHINE=mutant2400 DISTRO=opennfr make enigma2-image"
 	@echo " or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-enigma2-image"
 	@echo
