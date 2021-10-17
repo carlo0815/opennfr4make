@@ -103,7 +103,7 @@ all: init
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image"
 	@echo
 	@echo "To download all sources for image build:"
-	@echo "MACHINE=mutant2400 DISTRO=openatv DISTRO_TYPE=release make download"
+	@echo "MACHINE=mutant2400 DISTRO=opennfr DISTRO_TYPE=release make download"
 	@echo " or"
 	@echo "cd $(BUILD_DIR) ; source env.source ; bitbake $(DISTRO)-image --runall=fetch"
 	@echo
